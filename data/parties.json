@@ -48,4 +48,11 @@
     "abbrev": "社民",
     "color": "#00AEEF"
   }
+,
+  {
+    "id": "Mirai",
+    "name": "チームみらい",
+    "abbrev": "みらい",
+    "color": "#FF8800"
+  }
 ]
