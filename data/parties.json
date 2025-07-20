@@ -23,4 +23,29 @@
     "abbrev": "公明",
     "color": "#1B92D1"
   }
+,
+  {
+    "id": "JCP",
+    "name": "日本共産党",
+    "abbrev": "共産",
+    "color": "#e11b22"
+  },
+  {
+    "id": "DPFP",
+    "name": "国民民主党",
+    "abbrev": "国民",
+    "color": "#F8B400"
+  },
+  {
+    "id": "Reiwa",
+    "name": "れいわ新選組",
+    "abbrev": "れいわ",
+    "color": "#e83e8c"
+  },
+  {
+    "id": "SDP",
+    "name": "社会民主党",
+    "abbrev": "社民",
+    "color": "#00AEEF"
+  }
 ]

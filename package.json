@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.2.4",
+    "canvas-confetti": "^1.9.3",
     "next": "15.4.2",
     "next-intl": "^4.3.4",
     "react": "19.1.0",

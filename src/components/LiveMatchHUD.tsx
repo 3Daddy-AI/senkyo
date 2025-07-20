@@ -16,14 +16,14 @@ export default function LiveMatchHUD() {
   const answered = Object.keys(responses).length;
   const progress = answered / questions.length;
 
-  const sorted = Object.entries(scores)
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 5);
+  const sorted = parties
+    .map((p) => [p.id, scores[p.id] ?? 0] as [string, number])
+    .sort((a, b) => b[1] - a[1]);
 
   const getParty = (id: string) => parties.find((p) => p.id === id);
 
   return (
-    <aside className="fixed bottom-4 left-1/2 -translate-x-1/2 w-[90%] max-w-lg p-4 rounded-xl shadow-lg bg-white/90 backdrop-blur border border-gray-200">
+    <aside className="w-full rounded-lg bg-white/90 backdrop-blur border border-gray-200 shadow p-4">
       <div className="mb-2 text-xs text-gray-600 text-center">
         進捗 {answered}/{questions.length} ({Math.round(progress * 100)}%)
       </div>
