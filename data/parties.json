@@ -1,0 +1,26 @@
+[
+  {
+    "id": "LDP",
+    "name": "自由民主党",
+    "abbrev": "自民",
+    "color": "#005CAF"
+  },
+  {
+    "id": "CDP",
+    "name": "立憲民主党",
+    "abbrev": "立民",
+    "color": "#0096D8"
+  },
+  {
+    "id": "Ishin",
+    "name": "日本維新の会",
+    "abbrev": "維新",
+    "color": "#6BBE45"
+  },
+  {
+    "id": "Komei",
+    "name": "公明党",
+    "abbrev": "公明",
+    "color": "#1B92D1"
+  }
+]
