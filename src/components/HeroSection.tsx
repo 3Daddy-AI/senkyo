@@ -5,13 +5,12 @@ export default function HeroSection() {
   return (
     <section className="relative w-full overflow-hidden rounded-xl bg-gradient-to-b from-pink-100 via-rose-50 to-yellow-100 px-6 py-20 sm:py-28 shadow-md text-gray-800">
       <div className="relative z-10 flex flex-col items-center text-center gap-6 max-w-xl mx-auto">
-        <Image priority src="/logo.svg" alt="政治DNA診断ロゴ" width={120} height={120} />
+        <Image priority src="/heart-logo.svg" alt="政治マッチングロゴ" width={120} height={120} />
         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight drop-shadow-sm">
-          あなたの政治DNAを<br className="sm:hidden" /> 可愛い診断で解析
+          政治マッチング
         </h1>
         <p className="text-base sm:text-lg leading-relaxed opacity-90 max-w-md">
-          10 問前後に答えるだけで、あなたと政党の相性がリアルタイムにわかります。
-          下へスクロールしてコースを選んでください。
+          約10問に答えるだけで、あなたと政党の相性がすぐ分かります。下へスクロールしてコースを選んでね。
         </p>
       </div>
       <div className="absolute inset-0 pointer-events-none">

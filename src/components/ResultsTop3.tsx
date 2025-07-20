@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import useQuizStore from "../lib/quizStore";
-import ShareDialog from "./ShareDialog";
+
 import partiesData from "../../data/parties.json" assert { type: "json" };
 
 interface Party {
@@ -14,7 +14,18 @@ interface Party {
 const parties: Party[] = partiesData as Party[];
 
 export default function ResultsTop3() {
-  const [shareOpen, setShareOpen] = useState(false);
+  const handleShare = () => {
+    if (typeof navigator.share === "function") {
+      navigator.share({
+        title: "政治DNA診断 結果",
+        text: "私の政治DNA診断結果をチェック！",
+        url: window.location.href,
+      });
+    } else {
+      navigator.clipboard.writeText(window.location.href);
+      alert("リンクをコピーしました！");
+    }
+  };
   const { scores, confidence, reset } = useQuizStore();
 
   const top = Object.entries(scores)
@@ -55,7 +66,7 @@ export default function ResultsTop3() {
 
       <div className="flex gap-4">
         <button
-          onClick={() => setShareOpen(true)}
+          onClick={handleShare}
           className="rounded-full bg-pink-500 text-white px-6 py-2 hover:bg-pink-600 transition"
         >
           結果をシェア
@@ -67,7 +78,6 @@ export default function ResultsTop3() {
           もう一度診断する
         </button>
       </div>
-      <ShareDialog open={shareOpen} onClose={() => setShareOpen(false)} />
     </section>
   );
 }

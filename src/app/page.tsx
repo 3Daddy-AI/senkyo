@@ -9,9 +9,10 @@ import useQuizStore from "../lib/quizStore";
 
 export default function Home() {
   const { phase } = useQuizStore();
+  const bottomPad = phase === "quiz" ? "pb-48" : "";
 
   return (
-    <main className="flex flex-col items-center min-h-screen p-4 space-y-8 w-full">
+    <main className={`flex flex-col items-center min-h-screen p-4 space-y-8 w-full ${bottomPad}`}>
       <HeroSection />
       {phase === 'intro' && <ModeSelect />}
       {phase === 'warmup' && <ScenarioWarmup />}
